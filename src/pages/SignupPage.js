@@ -8,6 +8,7 @@ import authService from "./../services/auth.service";
 const API_URL = "http://localhost:5005";
 
 function SignupPage(props) {
+  console.log("Raivochka");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
@@ -33,6 +34,7 @@ function SignupPage(props) {
         navigate("/login");
       })
       .catch((error) => {
+        console.log(error);
         const errorDescription = error.response.data.message;
         setErrorMessage(errorDescription);
       });
