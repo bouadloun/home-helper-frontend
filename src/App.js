@@ -4,6 +4,7 @@ import SignupPage from "./pages/SignupPage";
 import LoginPage from "./pages/LoginPage";
 import IsAnon from "./components/IsAnon";
 import HomePage from "./pages/HomePage";
+import JobsPage from "./pages/JobsPage";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             </IsAnon>
           }
         />
+        <Route path="/jobs" element={<JobsPage />} />
       </Routes>
     </div>
   );

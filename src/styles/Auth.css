@@ -1,0 +1,85 @@
+.AuthPage {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 40px 0 0;
+}
+
+.auth-title {
+  font-size: 56px;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 0;
+  color: #244ca2;
+}
+
+.auth-form {
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: solid 3px #244ca2;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin: 40px auto;
+  padding: 45px;
+}
+
+.auth-input {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0;
+  height: 40px;
+  padding: 0;
+}
+
+.selectRole {
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 40px 0 8px;
+  height: 25px;
+  padding: 0;
+}
+
+.dropdown-role {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  height: 25px;
+  border: solid 1px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.auth-button {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+  background-color: #244ca2;
+  color: #eceaea;
+  margin: 40px 0 0;
+  padding: 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.auth-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+  margin: 25px 0 0;
+}
+
+.auth-link {
+  text-decoration: none;
+  font-size: 16px;
+  color: blue;
+  cursor: pointer;
+}
