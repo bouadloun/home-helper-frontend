@@ -1,3 +1,5 @@
+import Home from "../images/pic1.avif";
+
 function HomePage() {
   return (
     <div>
