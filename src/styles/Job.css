@@ -1,3 +1,33 @@
 ul {
   list-style-type: none;
 }
+
+.AddTask {
+  background: #f9eec3;
+  border: 1px solid grey;
+  box-shadow: 0px 2px 3px grey;
+  width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+#joblist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+#joblist div {
+  background-color: white;
+  margin: 15px 0 15px 0;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+#joblist li {
+  width: 70%;
+}

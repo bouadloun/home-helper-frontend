@@ -1,0 +1,29 @@
+.main-image {
+  width: 900px;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+.about-us {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 35px 150px 0;
+  gap: 30px;
+}
+
+.about-us-section {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.about-us-title {
+  margin: 0 0 20px;
+  font-size: 25px;
+  line-height: 1.2;
+}
+
+.about-us-text {
+  margin: 0 0 12px;
+  font-size: 18px;
+  line-height: 1;
+}

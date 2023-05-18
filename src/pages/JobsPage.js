@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function JobsPage() {
   const [allJobs, setAllJobs] = useState([]);
@@ -31,9 +32,10 @@ function JobsPage() {
     return (
       <li key={job._id}>
         <div>
-          <p>Title: {job.title}</p>
-          <p>Description: {job.description}</p>
+          <b>{job.title}</b>
+          <p>{job.description}</p>
           <p>Budget: {job.budget}</p>
+          <Link to="/application">apply here</Link>
         </div>
       </li>
     );
@@ -67,15 +69,18 @@ function JobsPage() {
   return (
     <div>
       <label className="selectRole" for="select-role">
-        Select a category
+        Filter by
       </label>
       <select className="dropdown-role" onChange={onSelectChange}>
         {/* step 3: transform data into html */}
         {categories.map(categoryToHTML)}
+
+        <option value="" selected disabled hidden>
+          Category
+        </option>
       </select>
 
-      <h1 className="auth-title">Jobs</h1>
-      <ul>{displayJobs.map(jobObjectToHTML)}</ul>
+      <ul id="joblist">{displayJobs.map(jobObjectToHTML)}</ul>
     </div>
   );
 }

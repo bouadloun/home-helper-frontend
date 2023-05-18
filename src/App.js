@@ -5,10 +5,14 @@ import LoginPage from "./pages/LoginPage";
 import IsAnon from "./components/IsAnon";
 import HomePage from "./pages/HomePage";
 import JobsPage from "./pages/JobsPage";
+import Navbar from "./components/Navbar";
+import AddJobPage from "./pages/AddJobPage";
+import ApplicationPage from "./pages/ApplicationPage";
 
 function App() {
   return (
     <div className="App">
+      <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
 
@@ -31,6 +35,8 @@ function App() {
           }
         />
         <Route path="/jobs" element={<JobsPage />} />
+        <Route path="/add-job" element={<AddJobPage />} />
+        <Route path="/application" element={<ApplicationPage />} />
       </Routes>
     </div>
   );

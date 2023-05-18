@@ -6,7 +6,7 @@
 }
 
 .auth-title {
-  font-size: 56px;
+  font-size: 35px;
   font-weight: 900;
   line-height: 1.5;
   margin: 0;
@@ -16,6 +16,7 @@
 .auth-form {
   width: 330px;
   display: flex;
+  background-color: white;
   flex-direction: column;
   position: relative;
   border: solid 3px #244ca2;
