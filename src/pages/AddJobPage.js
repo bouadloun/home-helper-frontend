@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const API_URL = "http://localhost:5005";
+const API_URL = process.env.REACT_APP_SERVER_URL;
 
 function AddJobPage(props) {
   const [title, setTitle] = useState("");
@@ -12,7 +12,7 @@ function AddJobPage(props) {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5005/api/categories").then((response) => {
+    axios.get(`${API_URL}/api/categories`).then((response) => {
       console.log("response.data", response.data);
       setCategories(response.data);
     });
