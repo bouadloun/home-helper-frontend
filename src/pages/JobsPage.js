@@ -11,18 +11,22 @@ function JobsPage() {
   // when the page loads.
   useEffect(() => {
     // <== ADD THE EFFECT
-    axios.get("http://localhost:5005/api/jobs").then((response) => {
-      console.log("response.data", response.data);
-      setAllJobs(response.data);
-      setDisplayJobs(response.data);
-    });
+    axios
+      .get(`${process.env.REACT_APP_SERVER_URL}/api/jobs`)
+      .then((response) => {
+        console.log("response.data", response.data);
+        setAllJobs(response.data);
+        setDisplayJobs(response.data);
+      });
   }, []);
 
   useEffect(() => {
-    axios.get("http://localhost:5005/api/categories").then((response) => {
-      console.log("response.data", response.data);
-      setCategories(response.data);
-    });
+    axios
+      .get(`${process.env.REACT_APP_SERVER_URL}/api/categories`)
+      .then((response) => {
+        console.log("response.data", response.data);
+        setCategories(response.data);
+      });
   }, []);
 
   // step 1: retrieve data
