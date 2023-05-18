@@ -8,6 +8,7 @@ import JobsPage from "./pages/JobsPage";
 import Navbar from "./components/Navbar";
 import AddJobPage from "./pages/AddJobPage";
 import ApplicationPage from "./pages/ApplicationPage";
+import IsPrivate from "./components/IsPrivate";
 
 function App() {
   return (
@@ -20,7 +21,6 @@ function App() {
           path="/signup"
           element={
             <IsAnon>
-              {" "}
               <SignupPage />{" "}
             </IsAnon>
           }
@@ -29,14 +29,27 @@ function App() {
           path="/login"
           element={
             <IsAnon>
-              {" "}
               <LoginPage />{" "}
             </IsAnon>
           }
         />
         <Route path="/jobs" element={<JobsPage />} />
-        <Route path="/add-job" element={<AddJobPage />} />
-        <Route path="/application" element={<ApplicationPage />} />
+        <Route
+          path="/add-job"
+          element={
+            <IsPrivate>
+              <AddJobPage />
+            </IsPrivate>
+          }
+        />
+        <Route
+          path="/application"
+          element={
+            <IsPrivate>
+              <ApplicationPage />
+            </IsPrivate>
+          }
+        />
       </Routes>
     </div>
   );

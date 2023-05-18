@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import axios from "axios";
+import { AuthContext } from "../context/auth.context";
 
 const API_URL = process.env.REACT_APP_SERVER_URL;
 
@@ -10,6 +11,9 @@ function AddJobPage(props) {
   const [category, setCategory] = useState("");
 
   const [categories, setCategories] = useState([]);
+
+  const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
+  console.log(user);
 
   useEffect(() => {
     axios.get(`${API_URL}/api/categories`).then((response) => {
@@ -34,7 +38,13 @@ function AddJobPage(props) {
     e.preventDefault();
 
     // Create an object representing the body of the POST request
-    const requestBody = { title, description, budget, category };
+    const requestBody = {
+      title,
+      description,
+      budget,
+      category,
+      user: user._id,
+    };
 
     axios
       .post(`${API_URL}/api/add-job`, requestBody)
